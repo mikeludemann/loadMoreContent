@@ -1,4 +1,5 @@
 function loadMoreContent(elements,clickElement,loadingContent,defaultText,count){
+
     'use strict';
 
     $(elements).slice(0,count).show();
@@ -26,10 +27,13 @@ function loadMoreContent(elements,clickElement,loadingContent,defaultText,count)
 
             });
         }
+
         $('html,body').animate({
 
             scrollTop: (this).offset().top
 
         }, 1500);
+
     });
+    
 }
