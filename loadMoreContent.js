@@ -1,26 +1,26 @@
 $(function(){
 
-    $("div").slice(0,4).show();
+    $(element).slice(0,count).show();
 
-    $("#loadMore").on('click', function(e){
+    $(clickElement).on('click', function(e){
 
         e.preventDefault();
 
-        $("div:hidden").slice(0,4).slideDown();
+        $(element + ":hidden").slice(0,count).slideDown();
 
-        //$("div:hidden").slice(0,4).fadeIn();
+        //$(element + ":hidden").slice(0,count).fadeIn();
 
-        if($("div:hidden").length == 0){
+        if($(element + ":hidden").length == 0){
 
-            $("#loadMore").fadeOut("slow");
+            $(clickElement).fadeOut("slow");
 
         } else {
 
-            $("#loadMore").html("loading").fadeIn("slow", function(){
+            $(clickElement).html(loadingText).fadeIn("slow", function(){
 
                 setTimeout(function(){
 
-                    $("#loadMore").html("More Content").fadeIn();
+                    $(clickElement).html(defaultText).fadeIn();
 
                 },1000);
 
